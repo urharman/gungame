@@ -11,7 +11,7 @@ namespace gungame
     {
         public string btnLoad()
         {
-            return "Load.gif";
+            return @"C:\Users\singh\source\repos\gungame\gungame\picture and audio\Load.gif";
         }
         public String btnPlayer1()
         {

@@ -13,8 +13,8 @@ namespace gungame
 {
     public partial class Form1 : Form
     {
-        int x = 0, y = 0;
-        int z = 2, cunt = 0;
+        int x = 2, y = 3;
+        int z = 4, cunt = 0;
 
         GenreateFire obj = new GenreateFire();
         Image Imageobj = new Image();
@@ -30,7 +30,9 @@ namespace gungame
             x = 0;
             cunt = 0;
             btnShot.Enabled = true;
-            pictureBox1.ImageLocation = Imageobj.btnPlay();
+            pictureBox1.ImageLocation = @"C:\Users\singh\source\repos\gungame\gungame\picture and audio\gun_PNG1385.png";
+            pictChamber.ImageLocation = @"C:\Users\singh\source\repos\gungame\gungame\picture and audio\54revolver.png";
+            
 
         }
 
@@ -52,20 +54,20 @@ namespace gungame
         private void button1_Click_1(object sender, EventArgs e)
         {
             {
-                SoundPlayer splayer = new SoundPlayer(@"C:\Users\singh\source\repos\gungame\gungame\gunshoot.wav");
+                SoundPlayer splayer = new SoundPlayer(@"C:\Users\singh\source\repos\gungame\gungame\picture and audio\gunshoot.wav");
                 splayer.Play();
             }
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            SoundPlayer splayer = new SoundPlayer(@"C:\Users\singh\source\repos\gungame\gungame\50.wav");
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\singh\source\repos\gungame\gungame\picture and audio\50.wav");
             splayer.Play();
             x = x + 1;
             if (x == 1)
             {
                
-                pictureBox1.ImageLocation = @"C:\Users\singh\source\repos\gungame\load.gif";
+                pictureBox1.ImageLocation = @"C:\Users\singh\source\repos\gungame\gungame\picture and audio\load.gif";
 
             }
         }
@@ -78,14 +80,14 @@ namespace gungame
         private void btnSpin_Click(object sender, EventArgs e)
         {
             {
-                SoundPlayer splayer = new SoundPlayer(@"C:\Users\singh\source\repos\gungame\gungame\gunreleod.wav");
+                SoundPlayer splayer = new SoundPlayer(@"C:\Users\singh\source\repos\gungame\gungame\picture and audio\gunreleod.wav");
                 splayer.Play();
             }
 
             if (x > 0)
             {
              
-                    pictChamber.ImageLocation = @"c:/gungame/1234.png";
+                    pictChamber.ImageLocation = @"C:\Users\singh\source\repos\gungame\gungame\picture and audio/1234.png";
             }
             else {
                 MessageBox.Show("Please Click on Load Bullet First");
@@ -96,6 +98,11 @@ namespace gungame
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private int value()
@@ -111,11 +118,11 @@ namespace gungame
             if (x > 0)
             {
                 y++;
-                pictureBox1.ImageLocation = Imageobj.btnPlayer1();
+                pictureBox1.ImageLocation = @"C:\Users\singh\source\repos\gungame\gungame\picture and audio\Shot.gif";
                 if (y == z && cunt<2)
                 {
                     cunt++;
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C: \Users\singh\source\repos\gungame\gungame\gunshoot.wav");
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\singh\source\repos\gungame\gungame\picture and audio\gunshoot.wav");
                     player.Play();
                     z = obj.fire();
                 }
