@@ -18,12 +18,12 @@ namespace gungame
 
         GenreateFire obj = new GenreateFire();
         Image Imageobj = new Image();
-
+        // General Information about an form is controlled through the following
         public Form1()
         {
             InitializeComponent();
         }
-
+        //this is button click to make it simple
         private void button1_Click(object sender, EventArgs e)
         {
             y = 0;
@@ -112,7 +112,7 @@ namespace gungame
             return random;
 
         }
-
+        //this is buuton player
         private void btnPlayer1_Click(object sender, EventArgs e)
         {
             if (x > 0)
